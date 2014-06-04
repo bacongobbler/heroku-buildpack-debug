@@ -1,20 +1,20 @@
 #!/bin/sh
 
-puts-step() {
+indent() {
     echo "-----> $@"
 }
 
-puts-step "build dir"
+indent "build dir"
 echo $1
 
-puts-step "cache dir"
+indent "cache dir"
 echo $2
 
-puts-step "printing environment"
+indent "printing environment"
 env
 
-puts-step "who am I?"
+indent "who am I?"
 whoami
 
-puts-step "printing umask"
+indent "printing umask"
 umask
